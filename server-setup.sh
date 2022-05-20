@@ -23,11 +23,11 @@ sudo apt install git -y
 
 echo "Installing Node"
 sudo apt install nodejs -y
-sudo node -v
-sudo npm -v
+node -v
+npm -v
 
 echo "Installing Yarn!"
-sudo npm install --global yarn
-sudo yarn --version
+npm install --global yarn
+yarn --version
 
 echo "Setup Done! Pencho!"
