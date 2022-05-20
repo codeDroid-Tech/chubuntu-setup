@@ -24,6 +24,9 @@ sudo apt install git -y
 echo "Installing Node"
 sudo apt install nodejs -y
 node -v
+sudo apt install npm
+sudo npm install -g n
+sudo n stable
 npm -v
 
 echo "Installing Yarn!"
@@ -31,3 +34,5 @@ npm install --global yarn
 yarn --version
 
 echo "Setup Done! Pencho!"
+
+echo"to start with the latest stable release of Node"
