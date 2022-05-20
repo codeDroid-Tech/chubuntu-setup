@@ -1,42 +1,33 @@
 #!/bin/sh
 
-# Reset
-CLEAR='\033[0m'           # Text Reset
-
-# Regular Colors
-BLACK='\033[0;30m'        # Black
-RED='\033[0;31m'          # Red
-GREEN='\033[0;32m'        # Green
-YELLOW='\033[0;33m'       # Yellow
-BLUE='\033[0;34m'         # Blue
-PURPLE='\033[0;35m'       # Purple
-CYAN='\033[0;36m'         # Cyan
-WHITE='\033[0;37m'        # White
-
-echo "${YELLOW}Hello There!!!${CLEAR}"
+echo "Hello There!!!"
 echo "Excited to set up your new server! Demn blyat be becoming rich, getting new servers everyday!"
 
-echo "${YELLOW}Updating packages!${CLEAR}"
+echo "Updating packages!"
 sudo apt update
 
-echo "${YELLOW}Installing nginx!${CLEAR}"
-sudo apt install nginx
+echo "Installing nginx!"
+sudo apt install nginx -y
 
-echo "${YELLOW}Adjusting your firewall rules!${CLEAR}${CLEAR}"
+echo "Adjusting your firewall rules!"
+sudo ufw enable -y
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
 
-echo "${YELLOW}Checking your web server${CLEAR}"
-systemctl status nginx
+echo "Checking your web server"
+sudo systemctl status nginx
 
-echo "${YELLOW}Installing Node${CLEAR}"
-sudo apt install nodejs
-node -v
-npm -v
+echo "Installing Git!"
+sudo apt install git -y
 
-echo "${YELLOW}Installing Yarn!${CLEAR}"
+echo "Installing Node"
+sudo apt install nodejs -y
+sudo node -v
+sudo npm -v
+
+echo "Installing Yarn!"
 sudo npm install --global yarn
 sudo yarn --version
 
-echo "${CYAN}Setup Done ${CLEAR}"
+echo "Setup Done! Pencho!"
